@@ -86,7 +86,8 @@
                 android:layout_weight="1"
                 android:text="Creat Account"
                 android:textColor="@color/purple_700"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="registerUser"/>
         </LinearLayout>
 
 
