@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.logger.Logger
 import org.checkerframework.common.returnsreceiver.qual.This
 
 class RegisterActivity : AppCompatActivity() {
@@ -69,7 +70,7 @@ class RegisterActivity : AppCompatActivity() {
                             val uid = result.user!!.uid
                             FirebaseDatabase.getInstance().getReference("users")
                                 .child(uid).setValue(sUser)
-                            startActivity(Intent(this@RegisterActivity, FeedActivity::class.java))
+                            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
                         }.addOnFailureListener {
                             Toast.makeText(
                                 this@RegisterActivity,
